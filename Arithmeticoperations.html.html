@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="1st number" id="input1" required><br>
+    <input type="number" placeholder="2st number" id="input2" required><br>
+    <button onclick="addition()">
+        Calculate
+    </button><br>
+    <table>
+            <tr><td>Addition:</td> <td><div type="text" id="add"></div></td></tr>
+            <tr><td>Subtraction:</td> <td><div type="text" id="sub"></div></td></tr>
+            <tr><td>Multiplication:</td> <td><div type="text" id="mul"></div></td></tr>
+            <tr><td>Divition:</td> <td><div type="text" id="div"></div></td></tr>
+            <tr><td>Remainder:</td> <td><div type="text" id="rem"></div></td></tr>
+    </table>
+    <script>   
+        function addition(){
+            a=document.getElementById("input1").value
+            b=document.getElementById("input2").value
+            sum=(+a)+(+b)
+            document.getElementById("add").innerHTML+=a
+            document.getElementById("add").innerHTML+="+"
+            document.getElementById("add").innerHTML+=b
+            document.getElementById("add").innerHTML+="="
+            document.getElementById("add").innerHTML+=sum
+            subtraction(a,b)
+        }
+        function subtraction(){
+            sub=(+a)-(+b)
+            document.getElementById("sub").innerHTML+=a
+            document.getElementById("sub").innerHTML+="-"
+            document.getElementById("sub").innerHTML+=b
+            document.getElementById("sub").innerHTML+="="
+            document.getElementById("sub").innerHTML+=sub
+            multiplication(a,b)
+        }
+        function multiplication(){
+            mul=(+a)*(+b)
+            document.getElementById("mul").innerHTML+=a
+            document.getElementById("mul").innerHTML+="*"
+            document.getElementById("mul").innerHTML+=b
+            document.getElementById("mul").innerHTML+="="
+            document.getElementById("mul").innerHTML+=mul
+            division(a,b)
+        }
+        function division(){
+            div=(+a)/(+b)
+            document.getElementById("div").innerHTML+=a
+            document.getElementById("div").innerHTML+="/"
+            document.getElementById("div").innerHTML+=b
+            document.getElementById("div").innerHTML+="="
+            document.getElementById("div").innerHTML+=div
+            remainder(a,b)
+        }
+        function remainder(){
+            rem=(+a)%(+b)
+            document.getElementById("rem").innerHTML+=a
+            document.getElementById("rem").innerHTML+="%"
+            document.getElementById("rem").innerHTML+=b
+            document.getElementById("rem").innerHTML+="="
+            document.getElementById("rem").innerHTML+=rem
+        }
+    </script>
+</body>
+</html>
